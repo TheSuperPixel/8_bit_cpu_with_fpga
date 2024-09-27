@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 20 08:08:17 2024
+# Process ID: 13368
+# Current directory: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4736 C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address} {u_ram/ram_auto_address} {u_ram/ram_clock} {u_ram/ram_data} {u_ram/ram_hand_address} {u_ram/ram_hand_data} {u_ram/ram_hand_write_en} {u_ram/ram_mode_select} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {<const0>} {<const0>_1} {<const0>_2} {ram_address_OBUF} {ram_auto_address} {ram_clock} {ram_data_OBUF} {ram_hand_address_IBUF} {ram_hand_data_IBUF} {ram_hand_write_en_IBUF} {ram_mode_select_IBUF} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/cpu_clock}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+relaunch_sim
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_hand_address}} {{/tb_cpu/u_cpu/u_ram/ram_hand_data}} {{/tb_cpu/u_cpu/u_ram/ram_mode_select}} 
+relaunch_sim
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_hand_write_en}} 
+relaunch_sim
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address} {u_ram/ram_auto_address} {u_ram/ram_clock} {u_ram/ram_data} {u_ram/ram_hand_address} {u_ram/ram_hand_data} {u_ram/ram_hand_write_en} {u_ram/ram_mode_select} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+current_wave_config {my01_tb_cpu_behav.wcfg}
+add_wave {{/tb_cpu/u_cpu/cpu_clock_n}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+relaunch_sim
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+run all
+close_sim

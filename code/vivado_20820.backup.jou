@@ -1,0 +1,520 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug 21 07:56:45 2024
+# Process ID: 20820
+# Current directory: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11148 C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property -dict [list CONFIG.C_PROBE8_WIDTH {8} CONFIG.C_PROBE7_WIDTH {6} CONFIG.C_PROBE6_WIDTH {3} CONFIG.C_PROBE5_WIDTH {8} CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_NUM_OF_PROBES {27}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.C_PROBE9_WIDTH {8} CONFIG.C_PROBE8_WIDTH {6} CONFIG.C_PROBE7_WIDTH {3} CONFIG.C_PROBE6_WIDTH {8} CONFIG.C_PROBE5_WIDTH {4} CONFIG.C_PROBE3_WIDTH {8} CONFIG.C_NUM_OF_PROBES {31}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {a_reg_data_ila} {a_reg_in_en_ila} {a_reg_out_en_ila} {alu_data_ila} {alu_empty_ila} {alu_full_ila} {alu_out_en_ila} {alu_sub_en_ila} {b_reg_data_ila} {b_reg_in_en_ila} {b_reg_out_en_ila} {command_counter_decode_ila} {command_counter_encode_ila} {command_reg_data_ila} {command_reg_in_en_ila} {command_reg_out_en_ila} {cpu_bus_ila} {cpu_clock_ila} {cpu_clock_n_ila} {display_smg_in_en_ila} {pc_data_ila} {pc_en_ila} {pc_load_ila} {pc_out_en_ila} {ram_address_ila} {ram_address_lock_en_ila} {ram_auto_mode_ila} {ram_data_ila} {ram_data_in_en_ila} {ram_data_out_en_ila} {ram_hand_mode_ila} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {32}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+wait_on_run ila_0_synth_1
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {sys_rst_n_ila} }
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes sys_rst_n_ila -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+write_hw_ila_data -csv_file {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata1.csv} hw_ila_data_1
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata1.ila} hw_ila_data_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_1
+set_property -dict [list CONFIG.C_PROBE15_WIDTH {8} CONFIG.C_PROBE14_WIDTH {8} CONFIG.C_PROBE13_WIDTH {8} CONFIG.C_PROBE12_WIDTH {8} CONFIG.C_PROBE11_WIDTH {8} CONFIG.C_PROBE10_WIDTH {8} CONFIG.C_PROBE9_WIDTH {8} CONFIG.C_PROBE8_WIDTH {8} CONFIG.C_PROBE7_WIDTH {8} CONFIG.C_PROBE6_WIDTH {8} CONFIG.C_PROBE5_WIDTH {8} CONFIG.C_PROBE4_WIDTH {8} CONFIG.C_PROBE3_WIDTH {8} CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {16}] [get_ips ila_1]
+generate_target {instantiation_template} [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+launch_runs ila_1_synth_1 -jobs 10
+wait_on_run ila_1_synth_1
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_all_data_ila_0} {u_ram/ram_all_data_ila_10} {u_ram/ram_all_data_ila_11} {u_ram/ram_all_data_ila_12} {u_ram/ram_all_data_ila_13} {u_ram/ram_all_data_ila_14} {u_ram/ram_all_data_ila_15} {u_ram/ram_all_data_ila_1} {u_ram/ram_all_data_ila_2} {u_ram/ram_all_data_ila_3} {u_ram/ram_all_data_ila_4} {u_ram/ram_all_data_ila_5} {u_ram/ram_all_data_ila_6} {u_ram/ram_all_data_ila_7} {u_ram/ram_all_data_ila_8} {u_ram/ram_all_data_ila_9} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata.ila} hw_ila_data_2
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata2.ila} hw_ila_data_2
+write_hw_ila_data -csv_file {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata2.csv} hw_ila_data_2
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {17}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+reset_run ila_1_synth_1
+launch_runs ila_1_synth_1 -jobs 10
+wait_on_run ila_1_synth_1
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run ila_1_synth_1
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {18}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+launch_runs ila_1_synth_1 -jobs 10
+wait_on_run ila_1_synth_1
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_clock_ila} {u_ram/sys_rst_n_ila} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_clock_ila} {u_ram/sys_rst_n_ila} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_ram/sys_rst_n_ila -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {20}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+reset_run ila_1_synth_1
+launch_runs ila_1_synth_1 -jobs 10
+wait_on_run ila_1_synth_1
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address_lock_en_ila} {u_ram/ram_data_in_en_ila} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+open_run synth_1 -name synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+show_objects -name b_reg [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* } ]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+refresh_design

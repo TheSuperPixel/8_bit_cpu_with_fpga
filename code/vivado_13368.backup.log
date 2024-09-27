@@ -1,0 +1,1721 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 20 08:08:17 2024
+# Process ID: 13368
+# Current directory: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4736 C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1121.160 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:09:07 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:09:07 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:10:23 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:10:23 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:23:45 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:23:45 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1121.160 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+WARNING: Simulation object <const0> was not found in the design.
+WARNING: Simulation object <const0>_1 was not found in the design.
+WARNING: Simulation object <const0>_2 was not found in the design.
+WARNING: Simulation object ram_address_OBUF was not found in the design.
+WARNING: Simulation object ram_auto_address was not found in the design.
+WARNING: Simulation object ram_clock was not found in the design.
+WARNING: Simulation object ram_data_OBUF was not found in the design.
+WARNING: Simulation object ram_hand_address_IBUF was not found in the design.
+WARNING: Simulation object ram_hand_data_IBUF was not found in the design.
+WARNING: Simulation object ram_hand_write_en_IBUF was not found in the design.
+WARNING: Simulation object ram_mode_select_IBUF was not found in the design.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:28:16
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:28:16
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address} {u_ram/ram_auto_address} {u_ram/ram_clock} {u_ram/ram_data} {u_ram/ram_hand_address} {u_ram/ram_hand_data} {u_ram/ram_hand_write_en} {u_ram/ram_mode_select} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:28:25
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:28:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-SMT2-C305A509ABCD" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:28:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:28:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:29:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:29:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:29:43
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:29:43
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:29:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:29:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:30:15 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:30:15 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {<const0>} {<const0>_1} {<const0>_2} {ram_address_OBUF} {ram_auto_address} {ram_clock} {ram_data_OBUF} {ram_hand_address_IBUF} {ram_hand_data_IBUF} {ram_hand_write_en_IBUF} {ram_mode_select_IBUF} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:32:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:32:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 08:32:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 08:32:58
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:33:19 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:33:19 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:37:52 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:37:52 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:40:10 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:40:10 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 08:41:18 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 08:41:18 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/xsim.dir/tb_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Aug 20 08:48:01 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2801.492 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock1 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock2 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock3 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock_state was not found in the design.
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2823.926 ; gain = 22.434
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock1 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock2 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock3 was not found in the design.
+WARNING: Simulation object /tb_cpu/u_cpu/u_clock/cpu_clock_state was not found in the design.
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3217.297 ; gain = 0.000
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/cpu_clock}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 3455.461 ; gain = 0.000
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_hand_address}} {{/tb_cpu/u_cpu/u_ram/ram_hand_data}} {{/tb_cpu/u_cpu/u_ram/ram_mode_select}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3455.461 ; gain = 0.000
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_hand_write_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3455.461 ; gain = 0.000
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3455.461 ; gain = 0.000
+run all
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'probe0' [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:72]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'probe1' [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:73]
+WARNING: [VRFC 10-5021] port 'probe3' is not connected on this instance [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3497.844 ; gain = 0.000
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/u_ram/ram_clock}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'ram_bus' [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:132]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3514.676 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3514.676 ; gain = 0.000
+run all
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 09:30:20 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 09:30:20 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 09:32:06 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 09:32:06 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address} {u_ram/ram_auto_address} {u_ram/ram_clock} {u_ram/ram_data} {u_ram/ram_hand_address} {u_ram/ram_hand_data} {u_ram/ram_hand_write_en} {u_ram/ram_mode_select} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-20 09:34:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-20 09:34:20
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 09:36:52 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 09:36:52 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Aug 20 09:41:33 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Tue Aug 20 09:41:33 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3514.676 ; gain = 0.000
+run all
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+current_wave_config {my01_tb_cpu_behav.wcfg}
+my01_tb_cpu_behav.wcfg
+add_wave {{/tb_cpu/u_cpu/cpu_clock_n}} 
+save_wave_config {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3514.676 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3514.676 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 4283.664 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 4283.664 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 4283.664 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2458] undeclared symbol alu_flag_in_en, assumed default net type wire [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 4283.664 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 20 16:57:57 2024...

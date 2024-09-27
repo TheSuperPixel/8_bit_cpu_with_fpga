@@ -1,0 +1,174 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 27 21:29:44 2024
+# Process ID: 36380
+# Current directory: E:/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32692 E:\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: E:/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: E:/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/fpga/xilinx/CPU/cpu/cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1140.793 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/sim/ila_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+"xelab -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 543a6d5ee09e4654b827dc3ba9d069c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_cpu_behav xil_defaultlib.tb_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.command_counter
+Compiling module xil_defaultlib.a_reg
+Compiling module xil_defaultlib.b_reg
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.command_reg
+Compiling module xil_defaultlib.ila_1
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.display_smg
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.tb_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_cpu_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/xsim.dir/tb_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Aug 27 21:30:36 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1171.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cpu_behav -key {Behavioral:sim_1:Functional:tb_cpu} -tclbatch {tb_cpu.tcl} -view {E:/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config E:/fpga/xilinx/CPU/cpu/cpu.sim/my01_tb_cpu_behav.wcfg
+source tb_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1199.645 ; gain = 26.617
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.645 ; gain = 28.402
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.prm} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 20   Memory Type : ba   Memory Capacity : 18   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 2941.039 ; gain = 0.000
+endgroup
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD

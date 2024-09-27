@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep 14 09:57:59 2024
+# Process ID: 3988
+# Current directory: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24548 E:\陈日新宝贵文件,闲人勿看！\学校里\大二下\课内\电子竞赛培养\fpga\上交材料2\2.2陈日新852203209\代码\cpu\cpu.xpr
+# Log file: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/vivado.log
+# Journal file: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1

@@ -1,0 +1,405 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug 21 19:44:45 2024
+# Process ID: 29248
+# Current directory: E:/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19536 E:\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: E:/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: E:/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/fpga/xilinx/CPU/cpu/cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1140.320 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 19:45:17 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 19:45:17 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 19:52:20 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 19:52:20 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 19:53:05 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 19:53:06 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 19:56:00
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 19:56:02
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 19:56:02
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 19:56:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 19:56:18
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 19:56:25
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 19:56:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes sys_rst_n_ila -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 19:57:00
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 19:57:06
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 19:57:06
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:17:36 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:17:36 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:22:25 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:22:25 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:35:47 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:35:47 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:41:52 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:41:52 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+get_ports alu_out_en
+ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:46:34 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:46:34 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Aug 21 20:51:31 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-SMT2-C305A509ABCD" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Common 17-39] 'refresh_hw_device' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:53:22 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:53:22 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 20:57:31 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 20:57:31 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 21:03:52 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 21:03:52 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 21:08:06 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 21:08:06 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a3ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a35t_0 and the probes file(s) .
+The device design has 2 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already progERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tERROR: [Labtoolstcl 44-51reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 23:10:45 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 23:10:45 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 23:43:50 2024] Launched synth_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 23:43:50 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 22 00:39:29 2024...
+unme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 23:10:06 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/test_io/test_io.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 23:42:44 2024] Launched impl_1...
+Run output will be captured here: E:/fpga/xilinx/CPU/test_io/test_io.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 22 00:39:42 2024...

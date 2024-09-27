@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/sim/ila_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module a_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-3380] identifier 'one_clock' is used before its declaration [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module command_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol clock_halt_en, assumed default net type wire [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:66]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_smg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

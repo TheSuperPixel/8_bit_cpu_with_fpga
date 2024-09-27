@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_cpu_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_cpu" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="15700000000fs"></ZoomStartTime>
+      <ZoomEndTime time="101000000001fs"></ZoomEndTime>
+      <Cursor1Time time="41650000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="302"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="39" />
+   <wvobject fp_name="/tb_cpu/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/sys_rst_n" type="logic">
+      <obj_property name="ElementShortName">sys_rst_n</obj_property>
+      <obj_property name="ObjectShortName">sys_rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/always_clock" type="logic">
+      <obj_property name="ElementShortName">always_clock</obj_property>
+      <obj_property name="ObjectShortName">always_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/one_clock_input" type="logic">
+      <obj_property name="ElementShortName">one_clock_input</obj_property>
+      <obj_property name="ObjectShortName">one_clock_input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/clock_mode" type="logic">
+      <obj_property name="ElementShortName">clock_mode</obj_property>
+      <obj_property name="ObjectShortName">clock_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/cpu_clock" type="logic">
+      <obj_property name="ElementShortName">cpu_clock</obj_property>
+      <obj_property name="ObjectShortName">cpu_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/cpu_clock_n" type="logic">
+      <obj_property name="ElementShortName">cpu_clock_n</obj_property>
+      <obj_property name="ObjectShortName">cpu_clock_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/command_counter_encode" type="array">
+      <obj_property name="ElementShortName">command_counter_encode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">command_counter_encode[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/command_counter_decode" type="array">
+      <obj_property name="ElementShortName">command_counter_decode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">command_counter_decode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/cpu_bus" type="array">
+      <obj_property name="ElementShortName">cpu_bus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_bus[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/u_control_unit/all_command" type="array">
+      <obj_property name="ElementShortName">all_command[511:0][0:16]</obj_property>
+      <obj_property name="ObjectShortName">all_command[511:0][0:16]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/u_control_unit/all_command_address" type="array">
+      <obj_property name="ElementShortName">all_command_address[8:0]</obj_property>
+      <obj_property name="ObjectShortName">all_command_address[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/ram_address_lock_en" type="logic">
+      <obj_property name="ElementShortName">ram_address_lock_en</obj_property>
+      <obj_property name="ObjectShortName">ram_address_lock_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/ram_data_in_en" type="logic">
+      <obj_property name="ElementShortName">ram_data_in_en</obj_property>
+      <obj_property name="ObjectShortName">ram_data_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/ram_data_out_en" type="logic">
+      <obj_property name="ElementShortName">ram_data_out_en</obj_property>
+      <obj_property name="ObjectShortName">ram_data_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/command_reg_out_en" type="logic">
+      <obj_property name="ElementShortName">command_reg_out_en</obj_property>
+      <obj_property name="ObjectShortName">command_reg_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/command_reg_in_en" type="logic">
+      <obj_property name="ElementShortName">command_reg_in_en</obj_property>
+      <obj_property name="ObjectShortName">command_reg_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/a_reg_in_en" type="logic">
+      <obj_property name="ElementShortName">a_reg_in_en</obj_property>
+      <obj_property name="ObjectShortName">a_reg_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/a_reg_out_en" type="logic">
+      <obj_property name="ElementShortName">a_reg_out_en</obj_property>
+      <obj_property name="ObjectShortName">a_reg_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/alu_out_en" type="logic">
+      <obj_property name="ElementShortName">alu_out_en</obj_property>
+      <obj_property name="ObjectShortName">alu_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/alu_sub_en" type="logic">
+      <obj_property name="ElementShortName">alu_sub_en</obj_property>
+      <obj_property name="ObjectShortName">alu_sub_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/b_reg_in_en" type="logic">
+      <obj_property name="ElementShortName">b_reg_in_en</obj_property>
+      <obj_property name="ObjectShortName">b_reg_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/b_reg_out_en" type="logic">
+      <obj_property name="ElementShortName">b_reg_out_en</obj_property>
+      <obj_property name="ObjectShortName">b_reg_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/display_smg_in_en" type="logic">
+      <obj_property name="ElementShortName">display_smg_in_en</obj_property>
+      <obj_property name="ObjectShortName">display_smg_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/pc_en" type="logic">
+      <obj_property name="ElementShortName">pc_en</obj_property>
+      <obj_property name="ObjectShortName">pc_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/pc_out_en" type="logic">
+      <obj_property name="ElementShortName">pc_out_en</obj_property>
+      <obj_property name="ObjectShortName">pc_out_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/pc_load" type="logic">
+      <obj_property name="ElementShortName">pc_load</obj_property>
+      <obj_property name="ObjectShortName">pc_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/alu_flag_in_en" type="logic">
+      <obj_property name="ElementShortName">alu_flag_in_en</obj_property>
+      <obj_property name="ObjectShortName">alu_flag_in_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/ram_address" type="array">
+      <obj_property name="ElementShortName">ram_address[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_address[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/ram_data" type="array">
+      <obj_property name="ElementShortName">ram_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/command_reg_data" type="array">
+      <obj_property name="ElementShortName">command_reg_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">command_reg_data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/a_reg_data" type="array">
+      <obj_property name="ElementShortName">a_reg_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg_data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/b_reg_data" type="array">
+      <obj_property name="ElementShortName">b_reg_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_reg_data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/alu_data" type="array">
+      <obj_property name="ElementShortName">alu_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/u_display_smg/display_smg_reg" type="array">
+      <obj_property name="ElementShortName">display_smg_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">display_smg_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/alu_full" type="logic">
+      <obj_property name="ElementShortName">alu_full</obj_property>
+      <obj_property name="ObjectShortName">alu_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/alu_empty" type="logic">
+      <obj_property name="ElementShortName">alu_empty</obj_property>
+      <obj_property name="ObjectShortName">alu_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/pc_data" type="array">
+      <obj_property name="ElementShortName">pc_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_data[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/u_cpu/u_ram/ram_clock" type="logic">
+      <obj_property name="ElementShortName">ram_clock</obj_property>
+      <obj_property name="ObjectShortName">ram_clock</obj_property>
+   </wvobject>
+</wave_config>

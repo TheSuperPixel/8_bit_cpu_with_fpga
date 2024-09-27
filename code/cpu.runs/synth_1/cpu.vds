@@ -1,0 +1,307 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 27 13:39:08 2024
+# Process ID: 29528
+# Current directory: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+# Command line: vivado.exe -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+# Log file: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/cpu.vds
+# Journal file: E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16868
+WARNING: [Synth 8-6901] identifier 'one_clock' is used before its declaration [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:15]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1154.965 ; gain = 13.859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'clock' (1#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v:2]
+INFO: [Synth 8-6157] synthesizing module 'command_counter' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'command_counter' (2#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'a_reg' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'a_reg' (3#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'b_reg' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'b_reg' (4#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (5#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (6#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'command_reg' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'command_reg' (7#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ram' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:128]
+INFO: [Synth 8-6157] synthesizing module 'ila_1' [E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/.Xil/Vivado-29528-LAPTOP-1D04QTQ2/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_1' (8#1) [E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/.Xil/Vivado-29528-LAPTOP-1D04QTQ2/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:128]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[15] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[14] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[13] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[12] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[11] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[10] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[9] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[8] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[7] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[6] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[5] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[4] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[3] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[2] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[1] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_all_data_reg[0] in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:25]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register ram_auto_address_reg in module ram. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (9#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'display_smg' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:1]
+INFO: [Synth 8-226] default block is never used [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:66]
+INFO: [Synth 8-226] default block is never used [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:88]
+INFO: [Synth 8-226] default block is never used [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:110]
+INFO: [Synth 8-226] default block is never used [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:132]
+INFO: [Synth 8-6155] done synthesizing module 'display_smg' (10#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (11#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:260]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/.Xil/Vivado-29528-LAPTOP-1D04QTQ2/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (12#1) [E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/.Xil/Vivado-29528-LAPTOP-1D04QTQ2/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:260]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1217.828 ; gain = 76.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1217.828 ; gain = 76.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1217.828 ; gain = 76.723
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1217.828 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [e:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Parsing XDC File [e:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1/ila_1_in_context.xdc] for cell 'u_ram/your_instance_name'
+Finished Parsing XDC File [e:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1/ila_1_in_context.xdc] for cell 'u_ram/your_instance_name'
+Parsing XDC File [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:8]
+Finished Parsing XDC File [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1333.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1333.691 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for your_instance_name. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ram/your_instance_name. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               29 Bit    Registers := 2     
+	                8 Bit    Registers := 43    
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 33    
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	 513 Input   17 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   6 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 27    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1333.691 ; gain = 192.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ila_0         |         1|
+|2     |ila_1         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |ila    |     2|
+|3     |BUFG   |     2|
+|4     |CARRY4 |    14|
+|5     |LUT1   |    14|
+|6     |LUT2   |    26|
+|7     |LUT3   |    21|
+|8     |LUT4   |    32|
+|9     |LUT5   |    57|
+|10    |LUT6   |   132|
+|11    |MUXF7  |     6|
+|12    |FDCE   |   215|
+|13    |FDPE   |    17|
+|14    |FDRE   |   219|
+|15    |FDSE   |     4|
+|16    |LDC    |     4|
+|17    |IBUF   |    18|
+|18    |OBUF   |    91|
+|19    |OBUFT  |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1340.031 ; gain = 83.062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.031 ; gain = 198.926
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1351.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1351.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LDC => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 5 Warnings, 17 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 1351.539 ; gain = 210.434
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'E:/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 27 13:39:32 2024...

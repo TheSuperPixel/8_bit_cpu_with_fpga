@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep 14 09:57:59 2024
+# Process ID: 3988
+# Current directory: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24548 E:\陈日新宝贵文件,闲人勿看！\学校里\大二下\课内\电子竞赛培养\fpga\上交材料2\2.2陈日新852203209\代码\cpu\cpu.xpr
+# Log file: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/vivado.log
+# Journal file: E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu'
+INFO: [Project 1-313] Project file moved from 'E:/fpga/xilinx/CPU/cpu' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1119.543 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'your_instance_name'
+INFO: [Project 1-454] Reading design checkpoint 'e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_1/ila_1.dcp' for cell 'u_ram/your_instance_name'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1455.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 583 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_ram/your_instance_name UUID: 70a10796-648b-5df7-84c7-fe8b20824716 
+INFO: [Chipscope 16-324] Core: your_instance_name UUID: c43761e0-c036-5039-8c69-07a263a83e64 
+Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [e:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.srcs/constrs_1/new/pin.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.srcs/constrs_1/new/pin.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/陈日新宝贵文件,闲人勿看！/学校里/大二下/课内/电子竞赛培养/fpga/上交材料2/2.2陈日新852203209/代码/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1575.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 284 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 284 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1752.746 ; gain = 599.785
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 14 10:00:05 2024...

@@ -1,0 +1,1175 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Aug 21 07:56:45 2024
+# Process ID: 20820
+# Current directory: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11148 C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.xpr
+# Log file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/vivado.log
+# Journal file: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1113.129 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 07:57:27 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 07:57:27 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1126.242 ; gain = 13.113
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 08:01:21 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 08:01:21 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 08:05:35 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 08:05:35 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 08:31:50 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 08:31:50 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_PROBE8_WIDTH {8} CONFIG.C_PROBE7_WIDTH {6} CONFIG.C_PROBE6_WIDTH {3} CONFIG.C_PROBE5_WIDTH {8} CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_NUM_OF_PROBES {27}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 08:57:13 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 08:59:07 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 09:00:30 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_PROBE9_WIDTH {8} CONFIG.C_PROBE8_WIDTH {6} CONFIG.C_PROBE7_WIDTH {3} CONFIG.C_PROBE6_WIDTH {8} CONFIG.C_PROBE5_WIDTH {4} CONFIG.C_PROBE3_WIDTH {8} CONFIG.C_NUM_OF_PROBES {31}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 09:13:59 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 09:15:41 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 09:15:41 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+WARNING: Simulation object u_ram/ram_address was not found in the design.
+WARNING: Simulation object u_ram/ram_auto_address was not found in the design.
+WARNING: Simulation object u_ram/ram_clock was not found in the design.
+WARNING: Simulation object u_ram/ram_data was not found in the design.
+WARNING: Simulation object u_ram/ram_hand_address was not found in the design.
+WARNING: Simulation object u_ram/ram_hand_data was not found in the design.
+WARNING: Simulation object u_ram/ram_hand_write_en was not found in the design.
+WARNING: Simulation object u_ram/ram_mode_select was not found in the design.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {a_reg_data_ila} {a_reg_in_en_ila} {a_reg_out_en_ila} {alu_data_ila} {alu_empty_ila} {alu_full_ila} {alu_out_en_ila} {alu_sub_en_ila} {b_reg_data_ila} {b_reg_in_en_ila} {b_reg_out_en_ila} {command_counter_decode_ila} {command_counter_encode_ila} {command_reg_data_ila} {command_reg_in_en_ila} {command_reg_out_en_ila} {cpu_bus_ila} {cpu_clock_ila} {cpu_clock_n_ila} {display_smg_in_en_ila} {pc_data_ila} {pc_en_ila} {pc_load_ila} {pc_out_en_ila} {ram_address_ila} {ram_address_lock_en_ila} {ram_auto_mode_ila} {ram_data_ila} {ram_data_in_en_ila} {ram_data_out_en_ila} {ram_hand_mode_ila} }
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:18:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:18:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:19:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:19:18
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:19:21
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:19:21
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:19:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:19:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:19:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:19:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 09:21:26 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 09:21:33 2024] Launched ila_0_synth_1, synth_1...
+Run output will be captured here:
+ila_0_synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 09:21:33 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:27:06
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:27:06
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:27:25
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:27:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:27:33
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:27:33
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:27:48
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:27:48
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:27:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:27:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {32}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+reset_run ila_0_synth_1
+launch_runs ila_0_synth_1 -jobs 10
+[Wed Aug 21 09:32:13 2024] Launched ila_0_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 09:33:07 2024] Launched ila_0_synth_1, synth_1...
+Run output will be captured here:
+ila_0_synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_0_synth_1/runme.log
+synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 09:33:07 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {sys_rst_n_ila} }
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes sys_rst_n_ila -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 09:59:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 09:59:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 10:05:09 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 10:05:09 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 3130.613 ; gain = 0.000
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 10:12:39
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 10:12:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 10:13:01
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 10:13:09
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 10:13:37
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 10:13:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 10:13:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 10:13:57
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+write_hw_ila_data -csv_file {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata1.csv} hw_ila_data_1
+C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/iladata1.csv
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata1.ila} hw_ila_data_1
+C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/iladata1.ila
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 10:31:18 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 10:31:18 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 10:35:12 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 10:36:19 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 10:36:19 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 10:38:54 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 10:38:54 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 11:31:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 11:31:17
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 11:31:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 11:31:35
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_1
+set_property -dict [list CONFIG.C_PROBE15_WIDTH {8} CONFIG.C_PROBE14_WIDTH {8} CONFIG.C_PROBE13_WIDTH {8} CONFIG.C_PROBE12_WIDTH {8} CONFIG.C_PROBE11_WIDTH {8} CONFIG.C_PROBE10_WIDTH {8} CONFIG.C_PROBE9_WIDTH {8} CONFIG.C_PROBE8_WIDTH {8} CONFIG.C_PROBE7_WIDTH {8} CONFIG.C_PROBE6_WIDTH {8} CONFIG.C_PROBE5_WIDTH {8} CONFIG.C_PROBE4_WIDTH {8} CONFIG.C_PROBE3_WIDTH {8} CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {16}] [get_ips ila_1]
+generate_target {instantiation_template} [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_1'...
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_1'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_1'...
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+launch_runs ila_1_synth_1 -jobs 10
+[Wed Aug 21 11:43:25 2024] Launched ila_1_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 11:46:30 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 11:46:30 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 11:49:55 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 11:49:55 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 11:52:29 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 11:52:29 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 11:59:48 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 11:59:48 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Aug 21 12:02:08 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 12:56:04
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 12:56:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 12:56:43
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 12:57:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 12:57:17
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:03:08 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 13:03:09 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:07:35 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_all_data_ila_0} {u_ram/ram_all_data_ila_10} {u_ram/ram_all_data_ila_11} {u_ram/ram_all_data_ila_12} {u_ram/ram_all_data_ila_13} {u_ram/ram_all_data_ila_14} {u_ram/ram_all_data_ila_15} {u_ram/ram_all_data_ila_1} {u_ram/ram_all_data_ila_2} {u_ram/ram_all_data_ila_3} {u_ram/ram_all_data_ila_4} {u_ram/ram_all_data_ila_5} {u_ram/ram_all_data_ila_6} {u_ram/ram_all_data_ila_7} {u_ram/ram_all_data_ila_8} {u_ram/ram_all_data_ila_9} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:10:19
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:10:23
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:10:33
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:10:38
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:10:48
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:10:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata.ila} hw_ila_data_2
+C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/iladata.ila
+write_hw_ila_data {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata2.ila} hw_ila_data_2
+C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/iladata2.ila
+write_hw_ila_data -csv_file {C:\Users\crx\Desktop\fpga\xilinx\CPU\cpu\cpu.runs\impl_1\iladata2.csv} hw_ila_data_2
+C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/iladata2.csv
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Aug 21 13:26:25 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:27:53 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 13:27:53 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:38:21 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 13:38:21 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:40:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:40:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:40:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:41:02
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:41:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:41:21
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 13:41:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 13:41:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:41:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:41:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:45:58 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 13:45:58 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:49:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:50:02
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 13:50:23
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 13:50:23
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {17}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_1'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_1'...
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+reset_run ila_1_synth_1
+launch_runs ila_1_synth_1 -jobs 10
+[Wed Aug 21 13:51:13 2024] Launched ila_1_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run ila_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1
+
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {18}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_1'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_1'...
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+launch_runs ila_1_synth_1 -jobs 10
+[Wed Aug 21 13:51:59 2024] Launched ila_1_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 13:53:46 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 13:53:46 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_clock_ila} {u_ram/sys_rst_n_ila} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_clock_ila} {u_ram/sys_rst_n_ila} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 13:56:28
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 13:56:28
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_ram/sys_rst_n_ila -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 13:56:45
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 13:56:47
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 13:57:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 13:57:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 14:00:22 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 14:00:22 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 14:02:34
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 14:02:35
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 14:02:41
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 14:02:41
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {20}] [get_ips ila_1]
+generate_target all [get_files  c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_1'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_1'...
+catch { config_ip_cache -export [get_ips -all ila_1] }
+export_ip_user_files -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -sync -force -quiet
+reset_run ila_1_synth_1
+launch_runs ila_1_synth_1 -jobs 10
+[Wed Aug 21 14:12:12 2024] Launched ila_1_synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/ip/ila_1/ila_1.xci] -directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files -ipstatic_source_dir C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/modelsim} {questa=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/questa} {riviera=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/riviera} {activehdl=C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 14:13:05 2024] Launched ila_1_synth_1, synth_1...
+Run output will be captured here:
+ila_1_synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/ila_1_synth_1/runme.log
+synth_1: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 14:13:05 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 14:16:33 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 14:16:34 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ram/ram_address_lock_en_ila} {u_ram/ram_data_in_en_ila} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 14:18:52
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 14:18:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 14:19:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 14:19:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 14:20:36 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 14:20:36 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 14:22:52
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 14:22:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 14:23:05
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 14:23:05
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 14:55:19 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 14:55:20 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 14:57:52
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 14:57:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 14:58:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 14:58:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 15:02:45 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:02:45 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 15:05:05
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 15:05:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 15:05:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 15:05:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Aug 21 15:09:43 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:09:43 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 15:11:46
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 15:11:48
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 15:12:04
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 15:12:04
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'your_instance_name'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1.dcp' for cell 'u_ram/your_instance_name'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 4406.574 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 602 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_ram/your_instance_name UUID: 70a10796-648b-5df7-84c7-fe8b20824716 
+INFO: [Chipscope 16-324] Core: your_instance_name UUID: c43761e0-c036-5039-8c69-07a263a83e64 
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4406.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 284 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 284 instances
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 4406.574 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug 21 15:30:23 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:30:23 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug 21 15:33:16 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:33:16 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Aug 21 15:35:32 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+show_objects -name b_reg [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* } ]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug 21 15:41:03 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:41:03 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4821.883 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug 21 15:49:02 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 15:49:02 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4829.324 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug 21 16:14:25 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/synth_1/runme.log
+[Wed Aug 21 16:14:25 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ram/your_instance_name' at location 'uuid_70A10796648B5DF784C7FE8B20824716' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'your_instance_name' at location 'uuid_C43761E0C03650398C6907A263A83E64' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/cpu.bin} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2024-Aug-21 16:16:39
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Aug-21 16:16:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ram/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Aug-21 16:16:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2024-Aug-21 16:16:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/C305A509ABCD
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Aug 21 16:18:50 2024] Launched impl_1...
+Run output will be captured here: C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.runs/impl_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'your_instance_name'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_1.dcp' for cell 'u_ram/your_instance_name'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 4841.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 578 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_ram/your_instance_name UUID: 70a10796-648b-5df7-84c7-fe8b20824716 
+INFO: [Chipscope 16-324] Core: your_instance_name UUID: c43761e0-c036-5039-8c69-07a263a83e64 
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Finished Parsing XDC File [c:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'u_ram/your_instance_name/inst'
+Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'sys_clksys_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clock_halt_en'. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/crx/Desktop/fpga/xilinx/CPU/cpu/cpu.srcs/constrs_1/new/pin.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4841.215 ; gain = 11.891
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 16:31:06 2024...

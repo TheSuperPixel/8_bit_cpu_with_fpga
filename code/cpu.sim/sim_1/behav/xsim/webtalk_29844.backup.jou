@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 27 21:30:36 2024
+# Process ID: 29844
+# Current directory: E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/xsim.dir/tb_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/xsim.dir/tb_cpu_behav/webtalk/xsim_webtalk.tcl -notrace

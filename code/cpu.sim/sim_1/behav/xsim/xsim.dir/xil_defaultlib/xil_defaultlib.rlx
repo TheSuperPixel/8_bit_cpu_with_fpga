@@ -1,0 +1,19 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_0/sim/ila_0.v,1724203932,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/sim/ila_1.v,,ila_0,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.gen/sources_1/ip/ila_1/sim/ila_1.v,1724220730,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v,,ila_1,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v,1723910005,verilog,,,,tb_cpu,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/a_reg.v,1723601454,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v,,a_reg,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/alu.v,1723706780,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v,,alu,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/b_reg.v,1723601461,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v,,b_reg,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/clock.v,1724765423,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v,,clock,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_counter.v,1724121068,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v,,command_counter,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/command_reg.v,1723605513,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v,,command_reg,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/control_unit.v,1724763846,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v,,control_unit,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/cpu.v,1724234101,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v,,cpu,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/display_smg.v,1724737140,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v,,display_smg,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/program_counter.v,1723604046,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v,,program_counter,,,,,,,,
+E:/fpga/xilinx/CPU/cpu/cpu.srcs/sources_1/new/ram.v,1724763234,verilog,,E:/fpga/xilinx/CPU/cpu/cpu.srcs/sim_1/new/tb_cpu.v,,ram,,,,,,,,
